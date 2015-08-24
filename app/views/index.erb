@@ -1,0 +1,24 @@
+<div class = "container">
+
+<h1>Anagram</h1>
+
+<p>Please insert any value</p>
+
+<form action="/find" method="post">
+  <input type="text" name="user_input">
+  <input type="submit" value="Anagram It!">
+</form>
+<p><b>Your input is:</b></p>
+<%= @word %>
+</br>
+<p><b>Anagram result:</b></p>
+<%= @sorted %>
+<p><b>Other common words inside our database:</b></p>
+<ul>
+<% @anagrams.each do |anagram| %>
+<li><%=	anagram.text %></li>
+<% end %>
+</ul>
+<!-- <p>URL parameters:</p>
+<%= params %> -->
+</div>
